@@ -11,7 +11,6 @@
 """
 
 
-
 # 判断字符串中中文字符的数量
 # 0x4E00 ~ 0x9FA5  ord(字符)
 
@@ -20,9 +19,8 @@ def chinese_count(str):
     for c in str:
         if 0x4E00 <= ord(c) <= 0x9FA5:
             count += 1
-    return  count
+    return count
 
 
 count = chinese_count("abc阿萨德BCDhel你好ll")
 print(count)
-

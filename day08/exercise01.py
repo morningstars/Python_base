@@ -35,11 +35,11 @@ class Enemy:
 
 
 list_enemy = [
-    Enemy('zs',10,10,10),
-    Enemy('ls',10,20,10),
-    Enemy('ww',10,10,30),
-
+    Enemy('zs', 10, 10, 10),
+    Enemy('ls', 10, 20, 10),
+    Enemy('ww', 10, 10, 30)
 ]
+
 
 def find_enemy(name):
     for e in list_enemy:

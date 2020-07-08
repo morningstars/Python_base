@@ -1,4 +1,3 @@
-
 """
 内存图
     不可变对象传参
@@ -18,7 +17,4 @@ number01 = 1
 # 栈帧中定义该方法内部创建的变量
 
 fun01(number01)
-print("number01:" + str(number01)) # 1
-
-
-
+print("number01:" + str(number01))  # 1

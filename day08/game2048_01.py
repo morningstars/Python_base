@@ -17,6 +17,7 @@ def zero_to_end(list_target):
     # 3.将新列表的值赋值给原列表
     list_target[:] = list_new
 
+
 #  方案二
 def zero_to_end2(list_target):
     zerocount = list_target.count(0)
