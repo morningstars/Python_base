@@ -1,15 +1,14 @@
-#  将0 移动至末尾
+"""
+
+2048 核心算法
+
+"""
+
+
+#  方法1、将0元素移动至末尾
 # 【2，0，2，0】 -》 【2，2，0，0】
 
-def zerototail(list):
-    for i in range(len(list)):
-        if list[i] == 0:
-            for j in range(i, len(list) - 1):
-                list[j] = list[j + 1]
-            list[-1] = 0
-    print(list)
-
-
+#  方案一
 def zero_to_end(list_target):
     # 1.取出非0元素 放入新列表
     list_new = [item for item in list_target if item != 0]
@@ -18,7 +17,7 @@ def zero_to_end(list_target):
     # 3.将新列表的值赋值给原列表
     list_target[:] = list_new
 
-
+#  方案二
 def zero_to_end2(list_target):
     zerocount = list_target.count(0)
     # 1.删除0元素 从末尾开始删除
@@ -35,7 +34,7 @@ def zero_to_end2(list_target):
 # print(list01)
 
 
-# 合并函数
+# 方法2、合并函数
 # 【2，2，0，0】 -》 【4，0，0，0】
 # 【2，2，0，2】 -》 【4，2，0，0】
 # 【4，0，2，2】 -》 【8，0，0，0】
@@ -57,7 +56,7 @@ print(list01)
 
 print("-------------")
 
-# 二维列表 以表格格式显示在控制台
+# 方法3、二维列表 以表格格式显示在控制台
 
 map01 = [
     [2, 0, 2, 0],
@@ -77,7 +76,7 @@ def print_map(map):
 # print_map(map01)
 
 
-# 定义向左移动函数
+# 方法4、定义移动函数
 """
     [2, 0, 2, 0]                 [4, 0, 0, 0]
     [2, 2, 2, 0]                 [4, 2, 0, 0]
@@ -101,6 +100,7 @@ def move_right(map):
         merge(list_merge)
         # 赋值
         map[i][::-1] = list_merge
+
 
 # 上移
 def move_top(map):
