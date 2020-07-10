@@ -90,7 +90,6 @@ def print_map(map):
 def move_left(map):
     for i in range(len(map)):
         merge(map[i])
-    print_map(map)
 
 
 # 右移
@@ -106,9 +105,9 @@ def move_right(map):
 # 上移
 def move_top(map):
     new_map = [4 * [0] for _ in range(4)]
-    for i in range(len(map01)):
-        for j in range(len(map01[i])):
-            new_map[j][i] = map01[i][j]
+    for i in range(len(map)):
+        for j in range(len(map[i])):
+            new_map[j][i] = map[i][j]
 
     move_left(new_map)
 
@@ -120,9 +119,9 @@ def move_top(map):
 # 下移
 def move_bottom(map):
     new_map = [4 * [0] for _ in range(4)]
-    for i in range(len(map01)):
-        for j in range(len(map01[i])):
-            new_map[j][i] = map01[i][j]
+    for i in range(len(map)):
+        for j in range(len(map[i])):
+            new_map[j][i] = map[i][j]
 
     move_right(new_map)
 
@@ -136,6 +135,6 @@ def move_bottom(map):
 print_map(map01)
 
 print("-------")
-# move_top(map01)
-move_bottom(map01)
+move_top(map01)
+# move_bottom(map01)
 print_map(map01)

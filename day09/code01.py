@@ -1,5 +1,28 @@
-print("hello git")
+"""
 
-print("from dev branch")
+实例对象
 
-print("this is a feature from dev")
+"""
+
+
+class Wife:
+    pass
+
+
+w01 = Wife()
+w01.name = "ah"
+print(w01.name)
+print(w01.__dict__)
+
+
+
+
+
+
+
+
+
+
+
+
+
