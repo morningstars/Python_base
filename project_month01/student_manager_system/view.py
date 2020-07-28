@@ -18,11 +18,21 @@ class StudentManagerView:
         # 1. 录入信息 生成学生对象
         stu = StudentModel()
         stu.name = input("姓名：")
-        stu.age = int(input("年龄："))
-        stu.score = int(input("成绩："))
+        stu.age = self.input_int_value("年龄：")
+        stu.score = self.input_int_value("成绩：")
 
         # 2. 调用控制器add_student
         self.__controller.add_student(stu)
+
+    def input_int_value(self, holder):
+        while True:
+            try:
+                score = int(input(holder))
+                return score
+            except ValueError:
+                print("输入有误")
+                continue
+
 
     def __show_students(self):
         if len(self.__controller.list_stu) == 0:
