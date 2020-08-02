@@ -3,7 +3,7 @@
 python学习笔记
 
 
-python_core_day02 am start
+python_core_day04 am start
 
 
 
